@@ -120,3 +120,40 @@
     @apply bg-background text-foreground;
   }
 }
+
+@theme {
+  --color-nepal-50: #f3f8fb;
+  --color-nepal-100: #e5eef4;
+  --color-nepal-200: #d0e2ed;
+  --color-nepal-300: #b0cfe0;
+  --color-nepal-400: #8ab5d0;
+  --color-nepal-500: #79a4c7;
+  --color-nepal-600: #5b86b5;
+  --color-nepal-700: #5075a5;
+  --color-nepal-800: #466087;
+  --color-nepal-900: #3c506c;
+  --color-nepal-950: #283343;
+  --color-ivory: #fffff0;
+  --color-picton-blue-50: #f1f7fe;
+  --color-picton-blue-100: #e2effc;
+  --color-picton-blue-200: #bfddf8;
+  --color-picton-blue-300: #87c2f2;
+  --color-picton-blue-400: #4da6e9;
+  --color-picton-blue-500: #2088d7;
+  --color-picton-blue-600: #126bb7;
+  --color-picton-blue-700: #105594;
+  --color-picton-blue-800: #11497b;
+  --color-picton-blue-900: #143e66;
+  --color-picton-blue-950: #0d2744;
+  --color-mountain-meadow-50: #eefbf6;
+  --color-mountain-meadow-100: #d6f5e7;
+  --color-mountain-meadow-200: #b0ead3;
+  --color-mountain-meadow-300: #7cd9ba;
+  --color-mountain-meadow-400: #46c19d;
+  --color-mountain-meadow-500: #27b892;
+  --color-mountain-meadow-600: #15866b;
+  --color-mountain-meadow-700: #116b57;
+  --color-mountain-meadow-800: #105547;
+  --color-mountain-meadow-900: #0e463b;
+  --color-mountain-meadow-950: #072722;
+}
