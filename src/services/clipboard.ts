@@ -15,8 +15,12 @@ type FetchLastClipboardItemRes = Promise<
 
 export async function fetchLastClipboardItem(): FetchLastClipboardItemRes {
   try {
-    const baseURL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
-
+    let baseURL: string = "";
+    if (typeof window === 'undefined') {
+      baseURL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+    } else {
+      baseURL = window.location.origin
+    }
     const url = new URL("/api/clipboard/last", baseURL);
     const res = await fetch(url);
     const resData: PostgrestResponse<ClipboardHistory> = await res.json();
