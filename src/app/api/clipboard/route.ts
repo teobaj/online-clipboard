@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
 
   return NextResponse.json(supabaseResponse);
 }
-export async function GET(request: NextRequest) {
+export async function GET(_: NextRequest) {
   const cookieStore = await cookies();
   const supabase = createClient(cookieStore as any);
 

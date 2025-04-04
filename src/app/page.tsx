@@ -2,7 +2,6 @@ import { Clipboard } from "@/components/clipboard/Clipboard";
 import { Header } from "@/components/header/Header";
 import { SendToClipboard } from "@/components/send-to-clipboard/SendToClipboard";
 import { fetchLastClipboardItem } from "@/services/clipboard";
-import Image from "next/image";
 
 export default async function Home() {
   const { data: lastItem } = await fetchLastClipboardItem()

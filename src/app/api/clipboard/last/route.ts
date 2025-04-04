@@ -4,9 +4,8 @@ import { createClient } from "@/utils/supabase/server";
 import { TABLES } from "@/utils/constants/tables";
 import { PostgrestResponse } from "@supabase/supabase-js";
 import { ClipboardHistory } from "@/models/clipboard-history.model";
-import { AddToClipboardPayload } from "@/models/payload.types";
 
-export async function GET(request: NextRequest) {
+export async function GET(_: NextRequest) {
   const cookieStore = await cookies();
   const supabase = createClient(cookieStore as any);
 
