@@ -29,6 +29,7 @@ export function SendToClipboard() {
     }
     setIsLoading(true);
     setIsSuccess(false);
+    setIsError(null)
     fetch("/api/clipboard", {
       method: "POST",
       body: JSON.stringify({
@@ -61,11 +62,13 @@ export function SendToClipboard() {
       <CardContent>
         <Textarea className="h-[200px]" ref={textareaRef} />
       </CardContent>
-      <CardFooter>
+      <CardFooter className="flex flex-col items-start">
         <Button disabled={isLoading} className="bg-mountain-meadow-500 flex" onClick={handleClick}>
           Send to clipboard 
           {isLoading ?  <LoaderCircle className="animate-spin" /> : <Send />}
         </Button>
+        {isSuccess && <span className="text-mountain-meadow-300"> Success </span>}
+        {error && <span className="text-destructive"> {error}</span>}
       </CardFooter>
     </Card>
   );
