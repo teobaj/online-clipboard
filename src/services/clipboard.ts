@@ -15,6 +15,8 @@ type FetchLastClipboardItemRes = Promise<
 
 export async function fetchLastClipboardItem(): FetchLastClipboardItemRes {
   try {
+    console.log(process.env)
+    console.log(process.env.NEXT_PUBLIC_API_URL)
     let baseURL: string = "";
     if (typeof window === 'undefined') {
       baseURL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
